@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lom xmlns="http://www.uah.es/LQM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.uah.es/LQM LQM_XSD/lqm.xsd">
+<general><title><string language="es">Example of Learning Quality Metadata</string>
+</title>
+<language>es</language>
+<description><string language="es">Metadata of a LO according to XSD schema of LQM</string>
+</description>
+<structure><source>LOMv1.0</source>
+<value>atomic</value></structure>
+<demand><string language="es">very demanded, indeed.</string>
+</demand>
+<certification>
+<qualification><source>LQMv1.0</source>
+<value>attendance</value></qualification>
+<validity><source>LQMv1.0</source>
+<value>international</value></validity>
+</certification>
+</general>
+<technical><accessibility>
+<adaptation><string language="es">Adapted for blind people</string>
+</adaptation>
+<help><source>LQMv1.0</source>
+<value>hardware</value></help>
+<hardware><source>LQMv1.0</source>
+<value>2</value></hardware>
+<software><source>LQMv1.0</source>
+<value>8.1.1</value></software>
+<software><source>LQMv1.0</source>
+<value>8.1.2</value></software>
+<web><source>LQMv1.0</source>
+<value>AA</value></web>
+</accessibility>
+<usability>
+<generalUsability><source>LQMv1.0</source>
+<value>4.3.1</value></generalUsability>
+<generalUsability><source>LQMv1.0</source>
+<value>4.3.2</value></generalUsability>
+<webUsability><source>LQMv1.0</source>
+<value>6.2</value></webUsability>
+<webUsability><source>LQMv1.0</source>
+<value>6.3</value></webUsability>
+</usability>
+</technical>
+<educational><environment>
+<features><source>LQMv1.0</source>
+<value>integrated</value></features>
+<features><source>LQMv1.0</source>
+<value>customizable</value></features>
+<communication><source>LQMv1.0</source>
+<value>messages</value></communication>
+<communication><source>LQMv1.0</source>
+<value>forum</value></communication>
+</environment>
+<tutoring>
+<tutoringSystem><source>LQMv1.0</source>
+<value>consultation</value></tutoringSystem>
+<tutoringSystem><source>LQMv1.0</source>
+<value>progress monitoring</value></tutoringSystem>
+<responseTime><duration>PT3H</duration>
+<description><string language="es">3 hours approx</string>
+</description>
+</responseTime>
+</tutoring>
+<learningMethod><source>LQMv1.0</source>
+<value>traditional learning</value></learningMethod>
+<trainingType><source>LQMv1.0</source>
+<value>face-to-face teaching</value></trainingType>
+</educational>
+</lom>

@@ -1,0 +1,203 @@
+<xs:schema targetNamespace="http://www.uah.es/LQM/vocab"
+           xmlns="http://www.uah.es/LQM/vocab"
+           xmlns:lom="http://www.uah.es/LQM"
+           xmlns:lx="http://www.uah.es/LQM/custom"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           version="UAH LQM XML 1.0">
+
+   <xs:annotation>
+      <xs:documentation>
+         This work is licensed under the Creative Commons Attribution-ShareAlike
+         License.  To view a copy of this license, see the file license.txt,
+         visit http://creativecommons.org/licenses/by-sa/2.0 or send a letter to
+         Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+      </xs:documentation>
+      <xs:documentation>
+         This component schema definition provides simple type declarations for LOM
+         data elements that are defined as Vocabulary data types.
+
+         This component schema definition enforces that vocabulary values are only 
+         those specified in LQM or in a custom vocabulary.  This component 
+         schema definition enforces adherence to the combined use of LQM
+         defined vocabulary values and custom vocabulary values by checking that both
+         sources and values are taken from either the token set defined in LQM or
+         from a custom vocabulary.
+
+         Organizations are free to define their own namespace for the custom vocabulary
+         extensions.  For completeness this XSD is set up to use a namespace defined
+         as xmlns:lx="http://www.uah.es/LQM/custom"
+      </xs:documentation>
+   </xs:annotation>
+
+   <xs:import namespace="http://www.uah.es/LQM"
+             schemaLocation="../common/vocabValues.xsd"/>
+             
+   <!-- Note: If custom vocabulary is used, xsd with definitions for custom vocabulary values
+   must be created and referenced with schemaLocation in the import namespace lx
+   For example: schemaLocation="../common/vocabValuesCustom.xsd"   -->  
+   <xs:import namespace="http://www.uah.es/LQM/custom"/>
+  
+   <!-- Vocabulary data type declarations -->
+
+   <!-- Source -->
+   <xs:simpleType name="source">
+      <xs:union memberTypes="lom:sourceValues lx:sourceValues"/>
+   </xs:simpleType>
+
+   <!-- 1.7 Structure -->
+   <xs:simpleType name="structure">
+      <xs:union memberTypes="lom:structureValues lx:structureValues"/>
+   </xs:simpleType>
+
+   <!-- 1.8 Aggregation Level -->
+   <xs:simpleType name="aggregationLevel">
+      <xs:union memberTypes="lom:aggregationLevelValues lx:aggregationLevelValues"/>
+   </xs:simpleType>
+
+   <!-- 1.10.1 Qualification -->
+   <xs:simpleType name="qualification">
+      <xs:union memberTypes="lom:qualificationValues lx:qualificationValues"/>
+   </xs:simpleType>
+
+   <!-- 1.10.3 Validity -->
+   <xs:simpleType name="validity">
+      <xs:union memberTypes="lom:validityValues lx:validityValues"/>
+   </xs:simpleType>
+
+   <!-- 2.2 Status -->
+   <xs:simpleType name="status">
+      <xs:union memberTypes="lom:statusValues lx:statusValues"/>
+   </xs:simpleType>
+
+   <!-- 2.3.1 Role -->
+   <xs:simpleType name="role">
+      <xs:union memberTypes="lom:roleValues lx:roleValues"/>
+   </xs:simpleType>
+
+   <!-- 3.2.1 Role -->
+   <xs:simpleType name="roleMeta">
+      <xs:union memberTypes="lom:roleMetaValues lx:roleMetaValues"/>
+   </xs:simpleType>
+
+   <!-- 4.4.1.1 Type -->
+   <xs:simpleType name="type">
+      <xs:union memberTypes="lom:typeValues lx:typeValues"/>
+   </xs:simpleType>
+
+   <!-- 4.4.1.2 Name -->
+   <xs:simpleType name="name">
+      <xs:union memberTypes="lom:nameValues lx:nameValues"/>
+   </xs:simpleType>
+
+   <!-- 4.8.2 Help -->
+   <xs:simpleType name="help">
+      <xs:union memberTypes="lom:helpValues lx:helpValues"/>
+   </xs:simpleType>
+
+   <!-- 4.8.3 Hardware -->
+   <xs:simpleType name="hardware">
+      <xs:union memberTypes="lom:hardwareValues lx:hardwareValues"/>
+   </xs:simpleType>
+
+   <!-- 4.8.4 Software -->
+   <xs:simpleType name="software">
+      <xs:union memberTypes="lom:softwareValues lx:softwareValues"/>
+   </xs:simpleType>
+
+   <!-- 4.8.5 Web -->
+   <xs:simpleType name="web">
+      <xs:union memberTypes="lom:webValues lx:webValues"/>
+   </xs:simpleType>
+
+   <!-- 4.9.1 General Usability -->
+   <xs:simpleType name="generalUsability">
+      <xs:union memberTypes="lom:generalUsabilityValues lx:generalUsabilityValues"/>
+   </xs:simpleType>
+
+   <!-- 4.9.2 Web Usability -->
+   <xs:simpleType name="webUsability">
+      <xs:union memberTypes="lom:webUsabilityValues lx:webUsabilityValues"/>
+   </xs:simpleType>
+
+   <!-- 5.1 Interactivity Type -->
+   <xs:simpleType name="interactivityType">
+      <xs:union memberTypes="lom:interactivityTypeValues lx:interactivityTypeValues"/>
+   </xs:simpleType>
+
+   <!-- 5.2 Learning Resource Type -->
+   <xs:simpleType name="learningResourceType">
+      <xs:union memberTypes="lom:learningResourceTypeValues lx:learningResourceTypeValues"/>
+   </xs:simpleType>
+
+   <!-- 5.3 Interactivity Level -->
+   <xs:simpleType name="interactivityLevel">
+      <xs:union memberTypes="lom:interactivityLevelValues lx:interactivityLevelValues"/>
+   </xs:simpleType>
+
+   <!-- 5.4 Semantic Density -->
+   <xs:simpleType name="semanticDensity">
+      <xs:union memberTypes="lom:semanticDensityValues lx:semanticDensityValues"/>
+   </xs:simpleType>
+
+   <!-- 5.5 Intended End User Role -->
+   <xs:simpleType name="intendedEndUserRole">
+      <xs:union memberTypes="lom:intendedEndUserRoleValues lx:intendedEndUserRoleValues"/>
+   </xs:simpleType>
+
+   <!-- 5.6 Context -->
+   <xs:simpleType name="context">
+      <xs:union memberTypes="lom:contextValues lx:contextValues"/>
+   </xs:simpleType>
+
+   <!-- 5.8 Difficulty -->
+   <xs:simpleType name="difficulty">
+      <xs:union memberTypes="lom:difficultyValues lx:difficultyValues"/>
+   </xs:simpleType>
+
+   <!-- 5.12.1 Features -->
+   <xs:simpleType name="features">
+      <xs:union memberTypes="lom:featuresValues lx:featuresValues"/>
+   </xs:simpleType>
+
+   <!-- 5.12.2 Communication -->
+   <xs:simpleType name="communication">
+      <xs:union memberTypes="lom:communicationValues lx:communicationValues"/>
+   </xs:simpleType>
+
+   <!-- 5.13.1 Tutoring System -->
+   <xs:simpleType name="tutoringSystem">
+      <xs:union memberTypes="lom:tutoringSystemValues lx:tutoringSystemValues"/>
+   </xs:simpleType>
+
+   <!-- 5.14 Learning Method -->
+   <xs:simpleType name="learningMethod">
+      <xs:union memberTypes="lom:learningMethodValues lx:learningMethodValues"/>
+   </xs:simpleType>
+
+   <!-- 5.15 Training Type -->
+   <xs:simpleType name="trainingType">
+      <xs:union memberTypes="lom:trainingTypeValues lx:trainingTypeValues"/>
+   </xs:simpleType>
+
+   <!-- 6.1 Cost -->
+   <xs:simpleType name="cost">
+      <xs:union memberTypes="lom:costValues lx:costValues"/>
+   </xs:simpleType>
+
+   <!-- 6.2 Copyright and Other Restrictions -->
+   <xs:simpleType name="copyrightAndOtherRestrictions">
+      <xs:union memberTypes="lom:copyrightAndOtherRestrictionsValues lx:copyrightAndOtherRestrictionsValues"/>
+   </xs:simpleType>
+
+   <!-- 7.1 Kind -->
+   <xs:simpleType name="kind">
+      <xs:union memberTypes="lom:kindValues lx:kindValues"/>
+   </xs:simpleType>
+
+   <!-- 9.1 Purpose -->
+   <xs:simpleType name="purpose">
+      <xs:union memberTypes="lom:purposeValues lx:purposeValues"/>
+   </xs:simpleType>
+
+</xs:schema>

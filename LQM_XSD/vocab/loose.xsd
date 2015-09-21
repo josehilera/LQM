@@ -1,0 +1,200 @@
+<xs:schema targetNamespace="http://www.uah.es/LQM/vocab"
+           xmlns="http://www.uah.es/LQM/vocab"
+           xmlns:lom="http://www.uah.es/LQM"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           version="UAH LQM XML 1.0">
+
+  <xs:annotation>
+    <xs:documentation>
+       This work is licensed under the Creative Commons Attribution-ShareAlike
+       License.  To view a copy of this license, see the file license.txt,
+       visit http://creativecommons.org/licenses/by-sa/2.0 or send a letter to
+       Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+    </xs:documentation>
+    <xs:documentation>
+       This component schema definition provides simple type declarations for LQM
+       data elements that are defined as Vocabulary data types.
+
+       This component schema definition enforces that vocabulary sources and values
+       are character strings, which simplifies the schema validation process for those
+       applications that perform vocabulary source/value validation using 
+       post-schema-validation.
+
+       This component schema definition relaxes the validation constraints by 
+       allowing both sources and values to be arbitrary character strings.
+
+       NOTE: The absence of the enforcement of vocabulary values does not relieve a 
+       particular LQM XML instance from satisfying vocabulary requirements defined 
+       in the LQMv1.0 base schema. Applications that require the use of vocab/loose.xsd 
+       component XSD should enforce those vocabulary requirements by other means.
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:import namespace="http://www.uah.es/LQM"
+             schemaLocation="../common/vocabValues.xsd"/>
+
+  <!-- Vocabulary data type declarations -->
+
+  <!-- Source -->
+  <xs:simpleType name="source">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 1.7 Structure -->
+  <xs:simpleType name="structure">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 1.8 Aggregation Level -->
+  <xs:simpleType name="aggregationLevel">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 1.10.1 Qualification -->
+  <xs:simpleType name="qualification">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 1.10.3 Validity -->
+  <xs:simpleType name="validity">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 2.2 Status -->
+  <xs:simpleType name="status">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 2.3.1 Role -->
+  <xs:simpleType name="role">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 3.2.1 Role -->
+  <xs:simpleType name="roleMeta">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 4.4.1.1 Type -->
+  <xs:simpleType name="type">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 4.4.1.2 Name -->
+  <xs:simpleType name="name">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 4.8.2 Help -->
+  <xs:simpleType name="help">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 4.8.3 Hardware -->
+  <xs:simpleType name="hardware">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 4.8.4 Software -->
+  <xs:simpleType name="software">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 4.8.5 Web -->
+  <xs:simpleType name="web">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 4.9.1 General Usability -->
+  <xs:simpleType name="generalUsability">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 4.9.2 Web Usability -->
+  <xs:simpleType name="webUsability">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 5.1 Interactivity Type -->
+  <xs:simpleType name="interactivityType">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 5.2 Learning Resource Type -->
+  <xs:simpleType name="learningResourceType">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 5.3 Interactivity Level -->
+  <xs:simpleType name="interactivityLevel">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 5.4 Semantic Density -->
+  <xs:simpleType name="semanticDensity">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 5.5 Intended End User Role -->
+  <xs:simpleType name="intendedEndUserRole">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 5.6 Context -->
+  <xs:simpleType name="context">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 5.8 Difficulty -->
+  <xs:simpleType name="difficulty">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+
+  <!-- 5.12.1 Features -->
+  <xs:simpleType name="features">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 5.12.2 Communication -->
+  <xs:simpleType name="communication">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 5.13.1 Tutoring System -->
+  <xs:simpleType name="tutoringSystem">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 5.14 Learning Method -->
+  <xs:simpleType name="learningMethod">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 5.15 Training Type -->
+  <xs:simpleType name="trainingType">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 6.1 Cost -->
+  <xs:simpleType name="cost">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 6.2 Copyright and Other Restrictions -->
+  <xs:simpleType name="copyrightAndOtherRestrictions">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 7.1 Kind -->
+  <xs:simpleType name="kind">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+  <!-- 9.1 Purpose -->
+  <xs:simpleType name="purpose">
+    <xs:restriction base="lom:CharacterString"/>
+  </xs:simpleType>
+
+</xs:schema>
